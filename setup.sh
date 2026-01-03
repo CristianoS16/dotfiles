@@ -9,8 +9,9 @@ sudo pacman -S --noconfirm flatpak git curl wget base-devel
 # Installing official repository packages
 echo "Installing native applications..."
 # General utilities
-sudo pacman -S --noconfirm htop kitty kolourpaint solaar vlc libreoffice-still obs-studio steam
+sudo pacman -S --noconfirm htop kitty timeshift kolourpaint solaar vlc libreoffice-still obs-studio steam
 
+# sudo systemctl enable cronie.service # Enable cron jobs for timeshift snapshots
 # For kitty, define it as default terminal emulator in System Settings and remove shotcut from konsole
 # For Steam, enable "Steam Play for all other titles" in Compatibility settings
 
