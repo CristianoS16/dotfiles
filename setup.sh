@@ -56,7 +56,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # --- 4. DOCKER CONFIGURATION ---
 echo "Setting up Docker..."
-sudo pacman -S --noconfirm docker docker-compose
+sudo pacman -S --noconfirm docker docker-compose docker-buildx
 sudo systemctl enable --now docker.service
 
 # Use Docker without sudo
@@ -78,6 +78,10 @@ flatpak install flathub com.bitwarden.desktop -y
 flatpak install flathub com.discordapp.Discord -y
 
 echo "Setup complete! Please restart your machine to apply all changes."
+
+# To update FDM in the future, use:
+# yay -S freedownloadmanager --combinedupgrade --provides=false
+# When asked to cleanBuild, type '1' (or 'A' for all) and press Enter.
 
 # Additional manual steps:
 #  - Add Github SSH key
